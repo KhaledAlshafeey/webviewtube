@@ -264,17 +264,19 @@ class _WebviewtubePlayerViewState extends State<_WebviewtubePlayerView> {
                 playerVars: {
                     'cc_load_policy': ${_boolean(options.enableCaption)},
                     'cc_lang_pref': '${options.captionLanguage}',
-                    'controls': ${_boolean(options.showControls)},
+                    'controls': 0,
                     'enablejsapi': 1,
+                    'autoplay': 1,
                     'fs': 0,
-                    'hl': '${options.interfaceLanguage}',
                     'iv_load_policy': 3,
+                    'disablekb': 1,
+                    'hl': '${options.interfaceLanguage}',
                     'loop': ${_boolean(options.loop)},
-                    ${options.loop ? "'playlist': '$videoId'," : ''}
                     'playsinline': 1,
                     'rel': 0,
                     'start': ${options.startAt},
-                    'end': ${options.endAt}
+                    'end': ${options.endAt},
+                    'showinfo': 0
                 },
                 events: {
                     onReady: function (event) { sendMessageToDart('Ready'); },
