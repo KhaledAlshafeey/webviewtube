@@ -232,7 +232,12 @@ class _WebviewtubePlayerViewState extends State<_WebviewtubePlayerView> {
 <html>
     <head>
         <style>
-            html,
+            html {
+              width: 100%;
+              height: 100%;
+              background-color: black;
+              pointer-events: none;
+            }
             body {
                 margin: 0;
                 padding: 0;
@@ -241,6 +246,17 @@ class _WebviewtubePlayerViewState extends State<_WebviewtubePlayerView> {
                 position: fixed;
                 height: 100%;
                 width: 100%;
+                pointer-events: inherit;
+            }
+            .embed-container iframe,
+            .embed-container object,
+            .embed-container embed {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100% !important;
+              height: 100% !important;
+              pointer-events: inherit;
             }
         </style>
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
