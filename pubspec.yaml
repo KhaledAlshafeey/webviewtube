@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   provider: ^6.0.3
-  webview_flutter: ^4.0.1
+  webview_flutter: ^4.7.0
   webview_flutter_android: ^3.7.1
   webview_flutter_wkwebview: ^3.4.4
 
